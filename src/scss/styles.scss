@@ -1,0 +1,30 @@
+html {
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+.container {
+  .col {
+    position: relative;
+
+    input[type=checkbox] {
+      position: absolute;
+
+      &:checked {
+        & + label > img {
+          border: 5px solid red;
+          padding: 0;
+        }
+      }
+    }
+
+    img {
+      object-fit: cover;
+      aspect-ratio: 1;
+    }
+  }
+}
